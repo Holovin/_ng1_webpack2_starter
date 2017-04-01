@@ -35,6 +35,12 @@ module.exports = {
       hash: true
     }),
 
+    new webpack.ProvidePlugin({
+      'jQuery': 'jquery',
+      'window.jQuery': 'jquery'
+    }),
+
+
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: function (module, count) {
